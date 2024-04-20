@@ -96,3 +96,6 @@ ALTER TABLE tbPedido ADD FOREIGN KEY (idUsuario) REFERENCES tbUsuario (idUsuario
 ALTER TABLE tbControlePizza ADD FOREIGN KEY (idPizza) REFERENCES tbPizzaCardapio (idPizza);
 ALTER TABLE tbReceita ADD FOREIGN KEY (idPizza) REFERENCES tbPizzaCardapio (idPizza);
 ALTER TABLE tbReceita ADD FOREIGN KEY (idEstoque) REFERENCES tbEstoque (idEstoque);
+
+-- Adicionando campos data e hora em pedido
+ALTER TABLE tbPedido ADD COLUMN periodo DATE, ADD COLUMN horario TIME;

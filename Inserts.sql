@@ -98,3 +98,9 @@ INSERT INTO tbVenda (idPedido, idEstoque, quantidade, valor) VALUES
 (1,16,1,49.00),
 (1,16,1,49.00),
 (2,18,1,54.00);
+
+-- Atualizando dados de pedidos anteriores
+UPDATE tbPedido SET periodo = '2024-04-15', horario = '18:00:00' WHERE idPedido = 1;
+UPDATE tbPedido SET periodo = '2024-04-20', horario = '19:00:00' WHERE idPedido = 2;
+
+UPDATE tbPedido SET subtotal = 98.00 WHERE idPedido = 1; 
